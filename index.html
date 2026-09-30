@@ -3,262 +3,380 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NK Showroom — Ótica & Exame de Vista · Amparo, Serra Negra, Socorro e Sto. Antônio de Posse</title>
-<meta name="description" content="Showroom de óculos de grau, sol e lentes de contato + exame de vista no local. NK Showroom — escolha enxergar além. Agende pelo WhatsApp.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233a2118'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='14' font-weight='bold' fill='%23efe9dd' text-anchor='middle'%3ENK%3C/text%3E%3C/svg%3E">
+<title>NK Showroom — Ótica boutique &amp; OptoClinic · Amparo, Serra Negra, Socorro e Sto. Antônio de Posse</title>
+<meta name="description" content="Curadoria de óculos de grau, sol e lentes de contato + exame de vista no local. NK Showroom — escolha enxergar além. Agende em 30 segundos pelo site.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e0e0c'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='13' font-weight='bold' fill='%23e3c98b' text-anchor='middle'%3ENK%3C/text%3E%3C/svg%3E">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --paper:#f2ede3; --paper2:#faf7f0; --card:#fffdf8;
-  --ink:#241a13; --ink2:#4a382c; --mut:#8b7a6a; --faint:#b3a695;
-  --ches:#8a4a2e; --ches2:#a05a38; --esp:#3a2118; --esp2:#2a160f;
-  --honey:#c98a4b; --line:rgba(58,33,24,.14); --line2:rgba(58,33,24,.08);
-  --wa:#1fa855; --wa2:#178a45;
+  --black:#0e0e0c; --black2:#161613; --gold:#e3c98b; --gold2:#c6a664; --gold3:#a98648;
+  --cream:#faf8f4; --paper:#f5f2ea; --ink:#1a1a17; --ink2:#3d3d38; --mut:#6f6e68;
+  --line:rgba(14,14,12,.08); --lineW:rgba(255,255,255,.12);
   --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
   --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,'Roboto Mono',monospace;
+  --wa:#1fa855; --wa2:#178a45;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.kick{font-family:var(--mono);font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--ches);font-weight:700;display:flex;align-items:center;gap:12px}
-.kick::before{content:"";width:30px;height:1px;background:var(--ches)}
-.h2{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:400;
-  letter-spacing:-.015em;line-height:1.12;margin:14px 0 12px;text-wrap:balance}
-.h2 em{font-style:italic;color:var(--ches)}
-.sub{color:var(--ink2);max-width:60ch;font-size:1.02rem}
+svg{max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.font-display{font-family:var(--serif)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(198,166,100,.4);
+  background:rgba(255,255,255,.05);padding:8px 16px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);font-weight:600}
+.eyebrow.lite{border-color:rgba(14,14,12,.18);color:var(--gold3);background:rgba(255,255,255,.6)}
 
-/* ============ HEADER ============ */
-header{position:sticky;top:0;z-index:50;background:rgba(242,237,227,.86);
-  backdrop-filter:blur(12px);border-bottom:1px solid var(--line2)}
-.hd{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
-.logo .mono-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--esp),#4d2c1e);
-  display:grid;place-items:center;box-shadow:0 6px 18px -6px rgba(58,33,24,.45)}
-.logo .mono-mark span{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#f0e7d8;letter-spacing:.02em}
-.logo .wm b{display:block;font-family:var(--serif);font-size:1.06rem;font-weight:700;letter-spacing:.01em;line-height:1.1}
-.logo .wm span{display:block;font-family:var(--mono);font-size:.52rem;letter-spacing:.42em;color:var(--mut);margin-top:3px}
-nav.links{display:flex;gap:26px}
-nav.links a{font-size:.85rem;font-weight:600;color:var(--ink2);text-decoration:none;letter-spacing:.01em;
-  padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
-nav.links a:hover{color:var(--ches);border-color:var(--ches)}
-.btn{display:inline-flex;align-items:center;gap:10px;border-radius:14px;text-decoration:none;font-weight:700;
-  font-size:.92rem;padding:13px 22px;transition:transform .2s,box-shadow .2s,background .2s;border:0;cursor:pointer}
-.btn:active{transform:scale(.98)}
-.btn-espresso{background:linear-gradient(135deg,var(--esp),#54301f);color:#f2ead9;
-  box-shadow:0 10px 26px -10px rgba(58,33,24,.55)}
-.btn-espresso:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(58,33,24,.6)}
-.btn-line{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
-.btn-line:hover{background:var(--ink);color:var(--paper2);transform:translateY(-2px)}
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;text-decoration:none;
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:16px 28px;transition:.25s;cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:#0e0e0c}
+.btn-gold:hover{background:#fff;transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(227,201,139,.5)}
+.btn-dark{background:var(--black);color:#fff}
+.btn-dark:hover{background:#2c2c29;transform:translateY(-2px)}
+.btn-oline{border:1.5px solid rgba(255,255,255,.25);color:#fff}
+.btn-oline:hover{background:#fff;color:var(--black)}
+.btn-oline-d{border:1.5px solid rgba(14,14,12,.25);color:var(--ink)}
+.btn-oline-d:hover{background:var(--black);color:#fff}
 .btn-wa{background:linear-gradient(135deg,var(--wa),var(--wa2));color:#fff;
   box-shadow:0 10px 26px -10px rgba(31,168,85,.6)}
-.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 34px -10px rgba(31,168,85,.7)}
-.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none!important}
-.hd .btn{padding:11px 18px;font-size:.86rem}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+.btn .ar{transition:transform .25s}
+.btn:hover .ar{transform:translateX(4px)}
+
+/* ============ HEADER ============ */
+header{position:sticky;top:0;z-index:50;background:rgba(14,14,12,.9);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo .mk{width:44px;height:44px;border-radius:14px;border:1px solid rgba(198,166,100,.45);
+  background:linear-gradient(135deg,#191915,#0e0e0c);display:grid;place-items:center;
+  box-shadow:inset 0 0 18px rgba(227,201,139,.12)}
+.logo .mk span{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--gold)}
+.logo .wm b{display:block;font-family:var(--serif);font-size:1.1rem;font-weight:700;letter-spacing:.02em;line-height:1.1}
+.logo .wm span{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.42em;color:rgba(255,255,255,.45);margin-top:3px}
+nav.links{display:flex;gap:26px}
+nav.links a{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);
+  text-decoration:none;transition:.2s}
+nav.links a:hover{color:var(--gold)}
+.hd .btn{padding:12px 22px;font-size:11px}
 
 /* ============ HERO ============ */
-.hero{position:relative;padding:84px 0 90px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(720px 480px at 78% 18%,rgba(201,138,75,.16),transparent 60%),
-             radial-gradient(620px 420px at 8% 88%,rgba(138,74,46,.10),transparent 55%);pointer-events:none}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
-.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.6vw,4.3rem);
-  line-height:1.04;letter-spacing:-.02em;margin:20px 0 18px}
-.hero h1 em{font-style:italic;color:var(--ches)}
-.hero .lead{font-size:1.08rem;color:var(--ink2);max-width:52ch}
-.hero .ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-.hero .meta{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap}
-.hero .meta div{font-size:.8rem;color:var(--mut)}
-.hero .meta b{display:block;font-family:var(--serif);font-size:1.35rem;color:var(--ink);font-weight:400}
-.hero-vis{position:relative;display:grid;place-items:center;min-height:340px}
-.hero-vis .glow{position:absolute;width:420px;height:420px;border-radius:50%;
-  background:radial-gradient(circle,rgba(201,138,75,.22),transparent 65%);filter:blur(10px)}
-.hero-vis svg.oculos{width:min(440px,100%);position:relative;filter:drop-shadow(0 30px 44px rgba(58,33,24,.28))}
-.chipf{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:14px;
-  padding:10px 16px;box-shadow:0 14px 34px -14px rgba(58,33,24,.35);font-size:.78rem;font-weight:700;
-  display:flex;align-items:center;gap:8px;animation:flutua 5s ease-in-out infinite}
-.chipf .st{color:var(--honey);letter-spacing:2px}
-.chipf.c1{top:8%;left:-2%;animation-delay:.4s}
-.chipf.c2{bottom:14%;right:-3%;animation-delay:1.4s}
-.chipf.c3{bottom:-4%;left:12%;animation-delay:2.2s;font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;color:var(--mut)}
-@keyframes flutua{50%{transform:translateY(-9px)}}
-.lens-shine{animation:shine 4.5s ease-in-out infinite}
-@keyframes shine{0%,100%{opacity:.25;transform:translateX(0)}50%{opacity:.9;transform:translateX(26px)}}
+.hero{position:relative;overflow:hidden;background:var(--black);color:#fff}
+.hero .bg{position:absolute;inset:0;pointer-events:none}
+.hero .bg .dots{position:absolute;inset:0;opacity:.35;
+  background-image:radial-gradient(rgba(227,201,139,.16) 1px,transparent 1px);background-size:26px 26px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 65% at 30% 40%,black 20%,transparent 75%);
+  mask-image:radial-gradient(ellipse 75% 65% at 30% 40%,black 20%,transparent 75%)}
+.hero .bg .glow{position:absolute;width:640px;height:640px;border-radius:50%;right:-160px;top:-200px;
+  background:radial-gradient(circle,rgba(198,166,100,.22),transparent 62%)}
+.hero .bg .vig{position:absolute;inset:0;background:
+  linear-gradient(90deg,var(--black) 8%,rgba(14,14,12,.55) 55%,rgba(14,14,12,.25)),
+  linear-gradient(0deg,var(--black),transparent 45%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:end;
+  padding-top:78px;padding-bottom:66px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.5rem,5.8vw,4.6rem);line-height:1.02;letter-spacing:-.02em;margin-top:24px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold)}
+.hero .lead{margin-top:22px;max-width:560px;font-size:16px;line-height:1.7;color:rgba(255,255,255,.7)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero .stats{display:flex;flex-wrap:wrap;gap:40px;margin-top:38px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12)}
+.hero .stats .n{font-family:var(--serif);font-size:1.9rem;color:var(--gold)}
+.hero .stats .l{margin-top:4px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.fade-up{opacity:0;transform:translateY(26px);animation:fup 1s cubic-bezier(.16,1,.3,1) forwards}
+.fade-up-1{animation-delay:.12s}.fade-up-2{animation-delay:.24s}.fade-up-3{animation-delay:.36s}.fade-up-4{animation-delay:.5s}
+@keyframes fup{to{opacity:1;transform:none}}
 
-/* ============ FAIXA ============ */
-.faixa{background:var(--esp);color:#e9dfcd;padding:26px 0}
-.faixa .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-.faixa .it{display:flex;align-items:center;gap:12px}
-.faixa .it svg{width:20px;height:20px;color:var(--honey);flex:none}
-.faixa .it b{font-size:.9rem;font-weight:700}
-.faixa .it span{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.28em;color:#a8988a;text-transform:uppercase}
+/* hero card */
+.hero-card{border-radius:28px;border:1px solid var(--lineW);background:rgba(255,255,255,.06);
+  backdrop-filter:blur(16px);padding:24px}
+.hero-card .hc-top{display:flex;align-items:center;justify-content:space-between}
+.hero-card .hc-top .t{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.hero-card .hc-top .tag{border-radius:999px;background:var(--gold);color:#0e0e0c;padding:5px 12px;
+  font-size:11px;font-weight:800;letter-spacing:.06em}
+.hero-card .fig{margin-top:16px;border-radius:18px;height:250px;background:
+  radial-gradient(circle at 50% 62%,rgba(198,166,100,.2),transparent 60%),linear-gradient(160deg,#1b1b16,#121209);
+  border:1px solid rgba(255,255,255,.07);display:grid;place-items:center;position:relative;overflow:hidden}
+.hero-card .fig svg{width:82%}
+.hero-card .fig .shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.09) 45%,transparent 60%);
+  transform:translateX(-120%);animation:shn 5s ease-in-out infinite}
+@keyframes shn{40%,100%{transform:translateX(120%)}}
+.hero-card .nm{margin-top:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.hero-card .nm .cat{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero-card .nm h3{font-family:var(--serif);font-size:1.5rem;margin-top:4px}
+.hero-card .nm .pv{margin-top:6px;font-size:13.5px;color:rgba(255,255,255,.65)}
+.hero-card .go{flex:none;width:48px;height:48px;border-radius:50%;background:#fff;color:#0e0e0c;display:grid;place-items:center;
+  text-decoration:none;font-size:19px;transition:.25s}
+.hero-card .go:hover{background:var(--gold);transform:rotate(45deg)}
+.hero-card .all{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.2);padding:13px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:#fff;text-decoration:none;transition:.25s}
+.hero-card .all:hover{background:#fff;color:#0e0e0c}
 
-/* ============ SEÇÕES ============ */
-section.bloco{padding:88px 0}
-section.bloco.alt{background:var(--paper2);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
-.head-sec{margin-bottom:38px}
+/* marquee */
+.marquee{position:relative;border-top:1px solid rgba(255,255,255,.09);background:rgba(0,0,0,.35);overflow:hidden}
+.marquee .track{display:flex;width:max-content;gap:48px;padding:16px 0;animation:mq 34s linear infinite}
+.marquee span{display:flex;align-items:center;gap:48px;white-space:nowrap;font-family:var(--serif);
+  font-size:16px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.marquee i{font-style:normal;color:var(--gold2);font-size:10px}
+@keyframes mq{to{transform:translateX(-50%)}}
 
-/* ============ COLEÇÃO ============ */
-.filtros{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 30px}
-.fbtn{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
-  padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink2);
-  cursor:pointer;transition:.2s}
-.fbtn:hover{border-color:var(--ches);color:var(--ches)}
-.fbtn.on{background:var(--esp);border-color:var(--esp);color:#f0e7d8}
-.grid-prod{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.pcard{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;
-  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
-.pcard:hover{transform:translateY(-5px);box-shadow:0 26px 48px -20px rgba(58,33,24,.3);border-color:rgba(138,74,46,.4)}
-.pcard .fig{background:linear-gradient(160deg,#f6f1e7,#efe7d8);display:grid;place-items:center;
-  padding:26px 18px;border-bottom:1px solid var(--line2)}
-.pcard .fig svg{width:78%;max-width:170px}
-.pcard .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
-.pcard .cat{font-family:var(--mono);font-size:.54rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ches);font-weight:700}
-.pcard h3{font-family:var(--serif);font-size:1.06rem;font-weight:700;letter-spacing:-.01em}
-.pcard .desc{font-size:.8rem;color:var(--mut);flex:1}
-.pcard .pedir{margin-top:10px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  font-size:.82rem;font-weight:700;color:var(--esp);text-decoration:none;padding:10px 14px;border-radius:11px;
-  border:1.5px solid var(--line);transition:.2s}
-.pcard .pedir:hover{background:var(--esp);color:#f0e7d8;border-color:var(--esp)}
+/* ============ SECTION HEAD ============ */
+section.bloco{padding:90px 0}
+.shead{text-align:center;max-width:640px;margin:0 auto}
+.shead.left{text-align:left;margin:0}
+.shead .eb{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold3);font-weight:700;display:block}
+.shead h2{font-family:var(--serif);font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.015em;margin-top:14px}
+.shead p{margin-top:14px;font-size:15px;color:var(--mut);line-height:1.7}
+.shead.on-dark .eb{color:var(--gold)}
+.shead.on-dark h2{color:#fff}
+.shead.on-dark p{color:rgba(255,255,255,.6)}
+
+/* ============ CATEGORIAS ============ */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.cat-card{position:relative;overflow:hidden;border-radius:24px;background:var(--black);color:#fff;min-height:380px;
+  display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;isolation:isolate}
+.cat-card .art{position:absolute;inset:0;display:grid;place-items:center;opacity:.9;transition:.7s}
+.cat-card .art svg{width:72%;max-width:210px;transform:rotate(-7deg)}
+.cat-card .ov{position:absolute;inset:0;background:linear-gradient(0deg,#000 4%,rgba(0,0,0,.4) 45%,rgba(14,14,12,.25));
+  transition:.5s;z-index:1}
+.cat-card .bd{position:relative;z-index:2;padding:24px}
+.cat-card .ct{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.cat-card h3{font-family:var(--serif);font-size:25px;margin-top:8px}
+.cat-card p{margin-top:6px;font-size:13.5px;color:rgba(255,255,255,.68)}
+.cat-card .ds{margin-top:16px;display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase}
+.cat-card .ds .ci{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);display:grid;place-items:center;transition:.3s}
+.cat-card:hover .art{transform:scale(1.06)}
+.cat-card:hover .ds .ci{background:var(--gold);color:#0e0e0c}
+
+/* ============ PRODUTOS ============ */
+.prod-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.prod-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 30px;justify-content:center}
+.fbtn{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding:11px 18px;
+  border-radius:999px;border:1.5px solid rgba(14,14,12,.15);background:transparent;color:var(--ink2);cursor:pointer;transition:.2s}
+.fbtn:hover{border-color:var(--gold3);color:var(--gold3)}
+.fbtn.on{background:var(--black);border-color:var(--black);color:var(--gold)}
+.grid-prod{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;
+  transition:.3s}
+.pcard:hover{transform:translateY(-6px);box-shadow:0 26px 48px -22px rgba(14,14,12,.28);border-color:rgba(198,166,100,.5)}
+.pcard .fig{background:radial-gradient(circle at 50% 68%,rgba(198,166,100,.16),transparent 62%),linear-gradient(165deg,#faf8f4,#f0ebdf);
+  display:grid;place-items:center;padding:30px 20px;border-bottom:1px solid var(--line)}
+.pcard .fig svg{width:76%;max-width:180px;transition:.5s}
+.pcard:hover .fig svg{transform:scale(1.06) rotate(-3deg)}
+.pcard .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:5px;flex:1}
+.pcard .cat{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold3);font-weight:700}
+.pcard h3{font-family:var(--serif);font-size:1.1rem}
+.pcard .desc{font-size:12.5px;color:var(--mut);flex:1}
+.pcard .pedir{margin-top:12px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:11px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--black);text-decoration:none;
+  padding:12px;border-radius:999px;transition:.25s}
+.pcard .pedir:hover{background:var(--wa)}
 .pcard.escondido{display:none}
-.nota-precos{margin-top:26px;font-size:.82rem;color:var(--mut);text-align:center}
+.benef{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;border-radius:24px;
+  background:var(--cream);border:1px solid var(--line);padding:26px}
+.benef .b{display:flex;gap:16px;align-items:flex-start}
+.benef .ic{flex:none;width:50px;height:50px;border-radius:16px;background:var(--black);color:var(--gold);display:grid;place-items:center}
+.benef b{font-size:14.5px}
+.benef p{margin-top:3px;font-size:13px;color:var(--mut);line-height:1.55}
 
-/* ============ EXAME / AGENDAMENTO ============ */
-.exame-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:44px;align-items:start}
-.exame-grid>*{min-width:0}
-svg{max-width:100%}
-.passo-lista{display:grid;gap:16px;margin-top:26px}
-.passo{display:flex;gap:14px;align-items:flex-start}
-.passo .n{flex:none;width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,rgba(138,74,46,.14),rgba(201,138,75,.14));
-  border:1px solid rgba(138,74,46,.3);display:grid;place-items:center;font-family:var(--mono);font-size:.68rem;font-weight:700;color:var(--ches)}
-.passo b{font-size:.94rem}
-.passo p{font-size:.84rem;color:var(--mut)}
-.book{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;
-  box-shadow:0 30px 60px -30px rgba(58,33,24,.35);position:sticky;top:92px}
-.book .bt{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:4px}
-.book .bs{font-size:.8rem;color:var(--mut);margin-bottom:20px}
-.bstep{margin-bottom:18px}
-.bstep label{display:flex;gap:8px;align-items:baseline;font-family:var(--mono);font-size:.58rem;
-  letter-spacing:.28em;text-transform:uppercase;color:var(--ink2);font-weight:700;margin-bottom:9px}
-.bstep label i{font-style:normal;color:var(--ches)}
+/* ============ EXPERIÊNCIA ============ */
+.exp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center}
+.exp-vis{position:relative}
+.exp-vis .frame{border-radius:28px;overflow:hidden;background:
+  radial-gradient(circle at 50% 30%,rgba(198,166,100,.24),transparent 55%),linear-gradient(165deg,#1a1a15,#0e0e0c 70%);
+  border:1px solid rgba(198,166,100,.25);display:grid;place-items:center;min-height:480px;position:relative}
+.exp-vis .frame .dots{position:absolute;inset:0;opacity:.3;
+  background-image:radial-gradient(rgba(227,201,139,.2) 1px,transparent 1px);background-size:24px 24px}
+.exp-vis .frame .chart{position:absolute;left:26px;top:22px;color:rgba(255,255,255,.16);font-family:var(--mono);
+  font-weight:700;text-align:center;line-height:1.5;letter-spacing:.2em}
+.exp-vis .frame svg.big{width:74%;position:relative;filter:drop-shadow(0 34px 54px rgba(0,0,0,.5))}
+.rev-float{position:absolute;right:-10px;bottom:-24px;border-radius:20px;background:var(--black);color:#fff;
+  padding:22px;max-width:300px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.09)}
+.rev-float .st{color:var(--gold);letter-spacing:3px;font-size:13px}
+.rev-float p{margin-top:10px;font-family:var(--serif);font-size:17.5px;line-height:1.4}
+.rev-float .who{margin-top:8px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.live-badge{position:absolute;left:22px;top:22px;border-radius:999px;background:rgba(255,255,255,.92);color:#0e0e0c;
+  padding:9px 16px;font-size:11.5px;font-weight:700;display:flex;align-items:center;gap:8px}
+.live-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.exp-feats{margin-top:30px;display:grid;gap:14px}
+.exp-f{display:flex;gap:16px;border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px;transition:.3s}
+.exp-f:hover{box-shadow:0 18px 36px -18px rgba(14,14,12,.22);border-color:rgba(198,166,100,.55);transform:translateX(4px)}
+.exp-f .ic{flex:none;width:48px;height:48px;border-radius:15px;background:#faf3e3;color:var(--gold3);
+  border:1px solid rgba(198,166,100,.3);display:grid;place-items:center;font-size:20px}
+.exp-f b{font-size:15px}
+.exp-f p{margin-top:3px;font-size:13.5px;color:var(--ink2);line-height:1.6}
+
+/* ============ LENTES (banda escura) ============ */
+.lentes{background:var(--black);color:#fff;position:relative;overflow:hidden}
+.lentes .dots{position:absolute;inset:0;opacity:.3;
+  background-image:radial-gradient(rgba(227,201,139,.15) 1px,transparent 1px);background-size:24px 24px}
+.lentes .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:52px;align-items:center;padding-top:90px;padding-bottom:90px}
+.lente-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
+.lente-card{border-radius:18px;border:1px solid var(--lineW);background:rgba(255,255,255,.05);padding:20px;transition:.3s}
+.lente-card:hover{border-color:rgba(198,166,100,.55);background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.lente-card b{display:flex;align-items:center;gap:8px;font-size:14.5px}
+.lente-card b::before{content:"◆";color:var(--gold);font-size:11px}
+.lente-card p{margin-top:6px;font-size:12.5px;color:rgba(255,255,255,.6)}
+.lentes-vis{display:grid;gap:14px}
+.lentes-vis .main{border-radius:24px;overflow:hidden;min-height:250px;background:
+  radial-gradient(circle at 30% 30%,rgba(227,201,139,.2),transparent 55%),linear-gradient(160deg,#191915,#10100c);
+  border:1px solid rgba(255,255,255,.09);display:grid;place-items:center;position:relative}
+.lentes-vis .sub{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lentes-vis .goldcard{border-radius:24px;background:var(--gold);color:#0e0e0c;padding:24px;display:flex;
+  flex-direction:column;justify-content:center;min-height:170px}
+.lentes-vis .goldcard .t{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}
+.lentes-vis .goldcard p{font-family:var(--serif);font-size:22px;line-height:1.25;margin-top:10px}
+.lentes-vis .side{border-radius:24px;overflow:hidden;min-height:170px;background:linear-gradient(160deg,#1a1a15,#12120e);
+  border:1px solid rgba(255,255,255,.09);display:grid;place-items:center}
+
+/* ============ AGENDAMENTO ============ */
+.book-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start}
+.book-left{position:sticky;top:100px}
+.book-left ul{margin-top:26px;display:grid;gap:12px;font-size:14.5px;color:var(--ink2)}
+.book-left li{display:flex;gap:12px;list-style:none}
+.book-left li::before{content:"✓";color:var(--gold3);font-weight:800}
+.phone-card{margin-top:28px;border-radius:20px;background:var(--black);color:#fff;padding:22px 24px;
+  display:flex;align-items:center;gap:16px}
+.phone-card .ic{width:48px;height:48px;border-radius:50%;background:var(--gold);color:#0e0e0c;display:grid;place-items:center;font-size:20px}
+.phone-card .l{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.phone-card .n{font-family:var(--serif);font-size:22px}
+.book{background:#fff;border:1px solid var(--line);border-radius:26px;padding:30px;
+  box-shadow:0 36px 70px -34px rgba(14,14,12,.3)}
+.book .bt{font-family:var(--serif);font-size:1.45rem}
+.book .bs{font-size:13px;color:var(--mut);margin:4px 0 22px}
+.bstep{margin-bottom:20px}
+.bstep label{display:flex;gap:8px;align-items:baseline;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--ink2);font-weight:700;margin-bottom:10px}
+.bstep label i{font-style:normal;color:var(--gold3)}
 .opt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-.opt{border:1.5px solid var(--line);border-radius:11px;padding:9px 12px;font-size:.82rem;font-weight:600;
-  color:var(--ink2);background:transparent;cursor:pointer;text-align:center;transition:.15s;font-family:var(--sans)}
-.opt:hover{border-color:var(--ches)}
-.opt.on{background:var(--esp);border-color:var(--esp);color:#f0e7d8}
+.opt{border:1.5px solid rgba(14,14,12,.15);border-radius:12px;padding:11px 12px;font-size:13px;font-weight:600;
+  color:var(--ink2);background:transparent;cursor:pointer;text-align:center;transition:.15s}
+.opt:hover{border-color:var(--gold3)}
+.opt.on{background:var(--black);border-color:var(--black);color:var(--gold)}
 .dias{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
-.dia{flex:none;min-width:64px;border:1.5px solid var(--line);border-radius:11px;padding:8px 6px;text-align:center;
-  cursor:pointer;background:transparent;transition:.15s;font-family:var(--sans)}
-.dia:hover{border-color:var(--ches)}
-.dia.on{background:var(--esp);border-color:var(--esp)}
-.dia.on .dw,.dia.on .dn{color:#f0e7d8}
-.dia .dw{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700}
-.dia .dn{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--ink)}
+.dia{flex:none;min-width:66px;border:1.5px solid rgba(14,14,12,.15);border-radius:12px;padding:9px 6px;text-align:center;
+  cursor:pointer;background:transparent;transition:.15s}
+.dia:hover{border-color:var(--gold3)}
+.dia.on{background:var(--black);border-color:var(--black)}
+.dia.on .dw,.dia.on .dn{color:var(--gold)}
+.dia .dw{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:700}
+.dia .dn{display:block;font-family:var(--serif);font-size:19px;font-weight:700;color:var(--ink)}
 .horas{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.hora{border:1.5px solid var(--line);border-radius:9px;padding:7px 4px;font-family:var(--mono);
-  font-size:.72rem;font-weight:700;color:var(--ink2);background:transparent;cursor:pointer;transition:.15s}
-.hora:hover{border-color:var(--ches)}
-.hora.on{background:var(--ches);border-color:var(--ches);color:#fff}
-.bstep input[type=text]{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;
-  font-size:.9rem;font-family:var(--sans);background:var(--paper2);color:var(--ink);outline:none;transition:.2s}
-.bstep input[type=text]:focus{border-color:var(--ches);background:#fff}
-.resumo{background:var(--paper);border:1px dashed var(--line);border-radius:12px;padding:12px 14px;
-  font-size:.82rem;color:var(--ink2);margin:6px 0 14px;min-height:44px}
-.resumo b{color:var(--esp)}
-.book .btn-wa{width:100%;justify-content:center;font-size:.95rem}
-.book .aviso{margin-top:12px;font-size:.7rem;color:var(--mut);text-align:center}
+.hora{border:1.5px solid rgba(14,14,12,.15);border-radius:10px;padding:9px 4px;font-family:var(--mono);
+  font-size:12px;font-weight:700;color:var(--ink2);background:transparent;cursor:pointer;transition:.15s}
+.hora:hover{border-color:var(--gold3)}
+.hora.on{background:var(--gold);border-color:var(--gold);color:#0e0e0c}
+.bstep input[type=text]{width:100%;border:1.5px solid rgba(14,14,12,.15);border-radius:12px;padding:13px 15px;
+  font-size:14px;font-family:var(--sans);background:var(--cream);color:var(--ink);outline:none;transition:.2s}
+.bstep input[type=text]:focus{border-color:var(--gold3);background:#fff}
+.resumo{background:var(--cream);border:1px dashed rgba(14,14,12,.2);border-radius:14px;padding:14px 16px;
+  font-size:13.5px;color:var(--ink2);margin:8px 0 16px;min-height:48px}
+.resumo b{color:var(--black)}
+.book .btn-wa{width:100%}
+.book .aviso{margin-top:12px;font-size:11.5px;color:var(--mut);text-align:center}
 
 /* ============ DEPOIMENTOS ============ */
-.rate-cards{display:grid;grid-template-columns:repeat(2,260px);gap:16px;margin:30px 0 26px}
-.rate{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
-.rate .num{font-family:var(--serif);font-size:2.6rem;font-weight:700;line-height:1}
-.rate .estrelas{color:var(--honey);font-size:.9rem;letter-spacing:3px;margin:6px 0 4px}
-.rate .lbl{font-family:var(--mono);font-size:.56rem;letter-spacing:.26em;text-transform:uppercase;color:var(--mut)}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}
-.rev .aspas{font-family:var(--serif);font-size:3rem;line-height:0;color:rgba(138,74,46,.25);position:absolute;top:24px;right:20px}
-.rev .estrelas{color:var(--honey);font-size:.72rem;letter-spacing:2px;margin-bottom:10px}
-.rev p{font-size:.88rem;color:var(--ink2);font-style:italic}
-.rev .quem{margin-top:14px;display:flex;align-items:center;gap:10px}
-.rev .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--ches),var(--honey));
-  color:#fff;display:grid;place-items:center;font-weight:800;font-size:.78rem}
-.rev .quem b{display:block;font-size:.82rem}
-.rev .quem span{display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.2em;color:var(--mut);text-transform:uppercase}
+.rev-band{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.rev{border-radius:22px;border:1px solid var(--line);background:var(--cream);padding:26px;display:flex;flex-direction:column;
+  transition:.3s}
+.rev:hover{box-shadow:0 24px 44px -20px rgba(14,14,12,.25);transform:translateY(-5px)}
+.rev .q{font-family:var(--serif);font-size:34px;line-height:0;color:var(--gold2);height:18px}
+.rev blockquote{margin-top:18px;font-size:14.5px;line-height:1.7;color:var(--ink);flex:1}
+.rev .st{margin-top:16px;color:var(--gold2);letter-spacing:3px;font-size:13px}
+.rev .quem{margin-top:12px;display:flex;align-items:center;gap:12px}
+.rev .av{width:44px;height:44px;border-radius:50%;background:var(--black);color:var(--gold);display:grid;
+  place-items:center;font-family:var(--serif);font-size:17px;font-weight:700}
+.rev .quem b{display:block;font-size:14px}
+.rev .quem span{display:block;font-size:12px;color:var(--mut)}
 
 /* ============ UNIDADES ============ */
-.uni-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
-.uni{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 22px;transition:.25s}
-.uni:hover{transform:translateY(-4px);box-shadow:0 22px 42px -20px rgba(58,33,24,.3)}
-.uni .cidade{font-family:var(--serif);font-size:1.28rem;font-weight:700;letter-spacing:-.01em}
-.uni .tag-unit{display:inline-block;font-family:var(--mono);font-size:.52rem;letter-spacing:.26em;color:var(--ches);
-  text-transform:uppercase;font-weight:700;margin:6px 0 12px;border:1px solid rgba(138,74,46,.3);border-radius:99px;padding:4px 10px}
-.uni p{font-size:.82rem;color:var(--ink2)}
-.uni a{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.78rem;font-weight:700;
-  color:var(--ches);text-decoration:none;border-bottom:1.5px solid rgba(138,74,46,.35);padding-bottom:2px}
-.uni a:hover{color:var(--esp);border-color:var(--esp)}
+.uni-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.uni{border-radius:24px;background:var(--black);color:#fff;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.uni:hover{transform:translateY(-6px);box-shadow:0 28px 52px -22px rgba(14,14,12,.45)}
+.uni .cap{position:relative;min-height:150px;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(circle at 50% 120%,rgba(198,166,100,.3),transparent 60%),linear-gradient(160deg,#1b1b16,#10100c)}
+.uni .cap .city{font-family:var(--serif);font-size:26px;letter-spacing:.02em}
+.uni .cap .tagp{position:absolute;left:14px;top:14px;border-radius:999px;background:rgba(14,14,12,.85);
+  backdrop-filter:blur(6px);padding:6px 12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.uni .bd{padding:22px;display:flex;flex-direction:column;flex:1}
+.uni p{font-size:13.5px;color:rgba(255,255,255,.72);line-height:1.6;flex:1}
+.uni .mapa{margin-top:16px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+  text-decoration:none;border-bottom:2px solid rgba(198,166,100,.5);padding-bottom:3px;align-self:flex-start}
+.uni .mapa:hover{color:#fff;border-color:#fff}
 
-/* ============ CTA FINAL ============ */
-.cta-final{background:linear-gradient(150deg,var(--esp2),var(--esp) 55%,#4d2c1e);color:#efe6d5;
-  padding:92px 0;text-align:center;position:relative;overflow:hidden}
-.cta-final::before{content:"";position:absolute;inset:0;
-  background:radial-gradient(600px 300px at 50% 0%,rgba(201,138,75,.18),transparent 60%)}
-.cta-final .h2{color:#f3ecdd}
-.cta-final .h2 em{color:var(--honey)}
-.cta-final p{color:#c9b9a6;max-width:56ch;margin:0 auto}
-.cta-final .ctas{display:flex;gap:14px;justify-content:center;margin-top:32px;flex-wrap:wrap}
-.cta-final .btn-espresso{background:#f0e7d8;color:var(--esp);box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
-.cta-final .btn-espresso:hover{background:#fff}
-.cta-final .btn-line{border-color:#f0e7d8;color:#f0e7d8}
-.cta-final .btn-line:hover{background:#f0e7d8;color:var(--esp)}
+/* ============ FAQ ============ */
+.faq{max-width:760px;margin:44px auto 0}
+.faq details{border:1px solid var(--line);border-radius:18px;background:#fff;margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  padding:20px 24px;font-weight:700;font-size:15px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--cream);border:1px solid var(--line);
+  display:grid;place-items:center;font-size:16px;font-weight:600;color:var(--gold3);transition:.25s}
+.faq details[open] summary .pm{background:var(--gold);color:#0e0e0c;transform:rotate(45deg)}
+.faq .a{padding:0 24px 20px;font-size:14px;color:var(--ink2);line-height:1.7}
+.club{margin-top:44px;border-radius:24px;background:var(--black);color:#fff;padding:38px;
+  display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
+.club .t{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.club h3{font-family:var(--serif);font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.25;margin-top:10px}
+.club h3 em{color:var(--gold);font-style:italic}
+.club .ctas{display:flex;flex-direction:column;gap:12px;min-width:250px}
 
 /* ============ FOOTER ============ */
-footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0 34px}
-.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;align-items:start}
-.ft .slogan{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--ink2);margin-top:14px}
-.ft h4{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
-.ft ul{list-style:none;display:grid;gap:9px}
-.ft a{color:var(--ink2);text-decoration:none;font-size:.86rem}
-.ft a:hover{color:var(--ches)}
-.ft .base{margin-top:44px;padding-top:22px;border-top:1px solid var(--line2);display:flex;justify-content:space-between;
-  gap:14px;flex-wrap:wrap;font-size:.72rem;color:var(--mut)}
-.ft .base b{color:var(--ink2)}
+footer{background:var(--black);color:rgba(255,255,255,.65);padding:56px 0 34px;border-top:1px solid rgba(255,255,255,.07)}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px;align-items:start}
+.ft .slogan{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold);margin-top:16px}
+.ft h4{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:16px}
+.ft ul{list-style:none;display:grid;gap:10px}
+.ft a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13.5px}
+.ft a:hover{color:var(--gold)}
+.ft .base{margin-top:46px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;
+  justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.4)}
+.ft .base b{color:rgba(255,255,255,.7)}
 
-/* ============ WA FLUTUANTE ============ */
+/* ============ WHATS FLOAT ============ */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;
   background:linear-gradient(135deg,var(--wa),var(--wa2));display:grid;place-items:center;
   box-shadow:0 14px 34px -8px rgba(31,168,85,.65);transition:transform .2s}
-.wa-float:hover{transform:scale(1.08)}
+.wa-float:hover{transform:scale(1.09)}
 .wa-float svg{width:27px;height:27px;fill:#fff}
 
 /* ============ REVEAL ============ */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
 .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.fade-up{opacity:1;transform:none}}
 
 /* ============ RESPONSIVO ============ */
-@media (max-width:1000px){
-  .hero .wrap{grid-template-columns:1fr;gap:26px}
-  .hero-vis{min-height:300px;order:-1}
-  .hero{padding:56px 0 64px}
+@media (max-width:1020px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:56px;padding-bottom:48px}
+  .hero-card{display:none}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
   .grid-prod{grid-template-columns:repeat(2,1fr)}
-  .exame-grid{grid-template-columns:minmax(0,1fr)}
-  .book{position:static}
+  .exp-grid,.lentes .wrap,.book-grid{grid-template-columns:minmax(0,1fr)}
+  .book-left{position:static}
+  .uni-grid{grid-template-columns:repeat(2,1fr)}
   .rev-grid{grid-template-columns:1fr 1fr}
-  .uni-grid{grid-template-columns:1fr 1fr}
-  .rate-cards{grid-template-columns:repeat(2,1fr)}
+  .club{grid-template-columns:1fr}
+  .club .ctas{flex-direction:row;min-width:0;flex-wrap:wrap}
 }
 @media (max-width:640px){
   nav.links{display:none}
   .grid-prod{grid-template-columns:1fr}
-  .rev-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr}
+  .cat-card{min-height:300px}
   .uni-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .lente-grid{grid-template-columns:1fr}
   .horas{grid-template-columns:repeat(4,1fr)}
-  .opt-grid{grid-template-columns:1fr 1fr}
-  .ft{grid-template-columns:1fr}
-  .hero .ctas .btn{flex:1;justify-content:center}
-  .faixa .wrap{justify-content:flex-start;gap:14px}
+  .benef{grid-template-columns:1fr}
+  .exp-vis .rev-float{position:static;margin-top:14px;max-width:none}
+  .hero .ctas .btn{flex:1}
+  .hero .stats{gap:26px}
 }
 </style>
 </head>
@@ -267,16 +385,17 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
 <header>
   <div class="wrap hd">
     <a class="logo" href="#inicio" aria-label="NK Showroom — início">
-      <div class="mono-mark"><span>NK</span></div>
+      <div class="mk"><span>NK</span></div>
       <div class="wm"><b>NK Showroom</b><span>ÓTICA · OPTOCLINIC</span></div>
     </a>
     <nav class="links" aria-label="Seções">
-      <a href="#colecao">Coleção</a>
-      <a href="#exame">Exame de vista</a>
+      <a href="#colecao">Coleções</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#exame">Agendar</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#unidades">Unidades</a>
     </nav>
-    <a class="btn btn-espresso" href="#exame">Agendar exame</a>
+    <a class="btn btn-gold" href="#exame">Agendar exame</a>
   </div>
 </header>
 
@@ -284,102 +403,231 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="inicio">
+  <div class="bg"><div class="glow"></div><div class="dots"></div><div class="vig"></div></div>
   <div class="wrap">
     <div>
-      <div class="kick">ÓTICA &amp; OPTOCLINIC — CIRCUITO DAS ÁGUAS / SP</div>
-      <h1>Escolha enxergar <em>além.</em></h1>
-      <p class="lead">Showroom de óculos de grau, sol e lentes de contato — com exame de vista no local.
-        Quatro unidades prontas pra te atender: Amparo, Serra Negra, Socorro e Santo Antônio de Posse.</p>
-      <div class="ctas">
-        <a class="btn btn-espresso" href="#exame">Agendar exame de vista</a>
-        <a class="btn btn-line" href="#colecao">Ver a coleção</a>
+      <p class="eyebrow fade-up">✦ Ótica boutique · Circuito das Águas / SP</p>
+      <h1 class="fade-up fade-up-1">Escolha enxergar<br><em>com outros olhos.</em></h1>
+      <p class="lead fade-up fade-up-2">Curadoria de armações de grau, sol e lentes de contato — com exame de vista
+        no local e um atendimento que analisa seu rosto, seu estilo e sua rotina. O óculos certo parece feito só pra você.</p>
+      <div class="ctas fade-up fade-up-3">
+        <a class="btn btn-gold" href="#exame">Agendar exame de vista <span class="ar">→</span></a>
+        <a class="btn btn-oline" href="#colecao">Explorar coleções</a>
       </div>
-      <div class="meta">
-        <div><b>5,0 ★</b>Amparo · no Google</div>
-        <div><b>4,7 ★</b>Serra Negra · no Google</div>
-        <div><b>4</b>unidades na região</div>
+      <div class="stats fade-up fade-up-4">
+        <div><div class="n">5,0★</div><div class="l">Google · Amparo</div></div>
+        <div><div class="n">4</div><div class="l">unidades na região</div></div>
+        <div><div class="n">4,7★</div><div class="l">Google · Serra Negra</div></div>
       </div>
     </div>
-    <div class="hero-vis" aria-hidden="true">
-      <div class="glow"></div>
-      <svg class="oculos" viewBox="0 0 460 220" fill="none">
-        <defs>
-          <linearGradient id="tort" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#8a4a2e"/><stop offset=".45" stop-color="#5c2f1e"/>
-            <stop offset=".7" stop-color="#c98a4b"/><stop offset="1" stop-color="#6e3a24"/>
-          </linearGradient>
-          <linearGradient id="lente" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset="1" stop-color="#d9c9ae" stop-opacity=".25"/>
-          </linearGradient>
-        </defs>
-        <!-- aro esquerdo -->
-        <circle cx="140" cy="112" r="74" stroke="url(#tort)" stroke-width="16"/>
-        <circle cx="140" cy="112" r="66" fill="url(#lente)"/>
-        <!-- aro direito -->
-        <circle cx="322" cy="112" r="74" stroke="url(#tort)" stroke-width="16"/>
-        <circle cx="322" cy="112" r="66" fill="url(#lente)"/>
-        <!-- ponte -->
-        <path d="M206 96 Q231 76 256 96" stroke="url(#tort)" stroke-width="14" stroke-linecap="round"/>
-        <!-- hastes -->
-        <path d="M68 100 L10 84" stroke="#5c2f1e" stroke-width="12" stroke-linecap="round"/>
-        <path d="M394 100 L452 84" stroke="#5c2f1e" stroke-width="12" stroke-linecap="round"/>
-        <!-- brilho das lentes -->
-        <g class="lens-shine"><line x1="108" y1="76" x2="150" y2="150" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".7"/></g>
-        <line x1="292" y1="72" x2="326" y2="138" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".45"/>
-      </svg>
-      <div class="chipf c1"><span class="st">★★★★★</span> Nota 5,0 — Amparo</div>
-      <div class="chipf c2">🤓 Exame de vista no local</div>
-      <div class="chipf c3">@NKOTICA.CO</div>
+
+    <div class="fade-up fade-up-3" style="display:block">
+      <div class="hero-card">
+        <div class="hc-top"><p class="t">Peça em destaque</p><span class="tag">SHOWROOM</span></div>
+        <div class="fig">
+          <div class="shine"></div>
+          <svg viewBox="0 0 460 220" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="tortH" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#8a4a2e"/><stop offset=".45" stop-color="#5c2f1e"/>
+                <stop offset=".7" stop-color="#c98a4b"/><stop offset="1" stop-color="#6e3a24"/>
+              </linearGradient>
+              <linearGradient id="lensH" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e3c98b" stop-opacity=".4"/><stop offset="1" stop-color="#8a744d" stop-opacity=".15"/>
+              </linearGradient>
+            </defs>
+            <circle cx="140" cy="112" r="74" stroke="url(#tortH)" stroke-width="16"/>
+            <circle cx="140" cy="112" r="66" fill="url(#lensH)"/>
+            <circle cx="322" cy="112" r="74" stroke="url(#tortH)" stroke-width="16"/>
+            <circle cx="322" cy="112" r="66" fill="url(#lensH)"/>
+            <path d="M206 96 Q231 76 256 96" stroke="url(#tortH)" stroke-width="14" stroke-linecap="round"/>
+            <path d="M68 100 L10 84" stroke="#5c2f1e" stroke-width="12" stroke-linecap="round"/>
+            <path d="M394 100 L452 84" stroke="#5c2f1e" stroke-width="12" stroke-linecap="round"/>
+            <line x1="108" y1="76" x2="150" y2="150" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".5"/>
+            <line x1="292" y1="72" x2="326" y2="138" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+          </svg>
+        </div>
+        <div class="nm">
+          <div>
+            <p class="cat">Óculos de grau</p>
+            <h3>Armação Tartaruga Redonda</h3>
+            <p class="pv">Valores e disponibilidade no WhatsApp</p>
+          </div>
+          <a class="go" id="heroGo" href="#" target="_blank" rel="noopener" aria-label="Pedir modelo em destaque">↗</a>
+        </div>
+        <a class="all" href="#colecao">Ver coleção completa →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Amparo <i>◆</i> Serra Negra <i>◆</i> Socorro <i>◆</i> Sto. Antônio de Posse <i>◆</i> Óculos de grau <i>◆</i> Sol <i>◆</i> Lentes de contato <i>◆</i> OptoClinic <i>◆</i></span>
+      <span>Amparo <i>◆</i> Serra Negra <i>◆</i> Socorro <i>◆</i> Sto. Antônio de Posse <i>◆</i> Óculos de grau <i>◆</i> Sol <i>◆</i> Lentes de contato <i>◆</i> OptoClinic <i>◆</i></span>
     </div>
   </div>
 </section>
 
-<!-- ================= FAIXA ================= -->
-<div class="faixa">
-  <div class="wrap">
-    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div><b>Óculos de grau &amp; sol</b><span>Armações selecionadas</span></div></div>
-    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg><div><b>Lentes de contato</b><span>Com conforto garantido</span></div></div>
-    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><div><b>Exame de vista</b><span>Agende pelo WhatsApp</span></div></div>
-    <div class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>4 unidades</b><span>Amparo · Serra Negra · Socorro · Posse</span></div></div>
-  </div>
-</div>
-
-<!-- ================= COLEÇÃO ================= -->
+<!-- ================= CATEGORIAS ================= -->
 <section class="bloco" id="colecao">
   <div class="wrap">
-    <div class="head-sec rv">
-      <div class="kick">01 · COLEÇÃO</div>
-      <h2 class="h2">O showroom, <em>aberto o tempo todo</em></h2>
-      <p class="sub">Escolha o modelo que tem a sua cara e finalize o pedido no WhatsApp — a gente confirma valores,
-        disponibilidade e ajusta a armação do seu jeito.</p>
-      <div class="filtros" role="group" aria-label="Filtrar coleção">
-        <button class="fbtn on" data-f="todos">Todos</button>
-        <button class="fbtn" data-f="grau">Óculos de grau</button>
-        <button class="fbtn" data-f="sol">Óculos de sol</button>
-        <button class="fbtn" data-f="lentes">Lentes de contato</button>
-        <button class="fbtn" data-f="infantil">Infantil</button>
-      </div>
+    <div class="shead rv">
+      <span class="eb">Nossas coleções</span>
+      <h2>Uma curadoria, quatro universos</h2>
+      <p>Cada peça escolhida a dedo — e ajustada ao seu rosto na unidade mais perto de você.</p>
     </div>
-
-    <div class="grid-prod" id="grelha"><!-- cards via JS --></div>
-    <p class="nota-precos">Valores e disponibilidade confirmados no WhatsApp · Retirada na unidade ou entrega na região</p>
+    <div class="cat-grid" id="catGrid"><!-- via JS --></div>
   </div>
 </section>
 
-<!-- ================= EXAME / AGENDAMENTO ================= -->
-<section class="bloco alt" id="exame">
-  <div class="wrap exame-grid">
-    <div class="rv">
-      <div class="kick">02 · NK OPTOCLINIC</div>
-      <h2 class="h2">Exame de vista <em>sem fila, sem espera</em></h2>
-      <p class="sub">Precisa atualizar o grau, adaptar lente de contato ou tirar dúvida sobre sua visão?
-        Agenda aqui em um minuto — a confirmação chega no seu WhatsApp.</p>
-      <div class="passo-lista">
-        <div class="passo"><div class="n">01</div><div><b>Você escolhe unidade, dia e horário</b><p>Disponível 24h — até de madrugada, no seu ritmo.</p></div></div>
-        <div class="passo"><div class="n">02</div><div><b>Confirmação direto no WhatsApp</b><p>A gente confirma a vaga e avisa o que precisa levar.</p></div></div>
-        <div class="passo"><div class="n">03</div><div><b>Exame no local e óculos na sequência</b><p>Seu grau atualizado e a armação certa pra você, na mesma visita.</p></div></div>
+<!-- ================= PRODUTOS ================= -->
+<section class="bloco prod-band">
+  <div class="wrap">
+    <div class="prod-head">
+      <div class="shead left rv">
+        <span class="eb">Seleção do showroom</span>
+        <h2>Os mais desejados</h2>
+        <p>Escolha pelo site, finalize no WhatsApp — a gente separa o modelo na unidade pra você provar.</p>
       </div>
-      <div class="passo" style="margin-top:26px"><div class="n">✓</div><div><b>Também agendamos:</b><p style="color:var(--ink2)">ajuste de armação, pequenos reparos e retirada de encomenda.</p></div></div>
+      <a class="btn btn-dark rv" href="#colecao" style="align-self:flex-end">Ver catálogo completo <span class="ar">→</span></a>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtrar coleção">
+      <button class="fbtn on" data-f="todos">Todos</button>
+      <button class="fbtn" data-f="grau">Óculos de grau</button>
+      <button class="fbtn" data-f="sol">Óculos de sol</button>
+      <button class="fbtn" data-f="lentes">Lentes de contato</button>
+      <button class="fbtn" data-f="infantil">Infantil</button>
+    </div>
+    <div class="grid-prod" id="grelha"><!-- via JS --></div>
+    <div class="benef rv">
+      <div class="b"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <div><b>Pedido direto no WhatsApp</b><p>Você escolhe no site e a conversa já começa com o modelo separado.</p></div></div>
+      <div class="b"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 3 7v6c0 5 4 8.4 9 9 5-.6 9-4 9-9V7z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><b>Ajuste na unidade</b><p>Sua armação ajustada ao seu rosto na hora da retirada.</p></div></div>
+      <div class="b"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+        <div><b>Retirada ou entrega</b><p>Busca na loja ou entrega na região — combina no WhatsApp.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section class="bloco" id="experiencia">
+  <div class="wrap exp-grid">
+    <div class="exp-vis rv">
+      <div class="frame">
+        <div class="dots"></div>
+        <div class="chart" aria-hidden="true">NK<br><span style="font-size:15px">OPTO</span><br><span style="font-size:11px">CLINIC</span><br><span style="font-size:8px">20/20</span><br><span style="font-size:6px">ESCOLHA</span></div>
+        <svg class="big" viewBox="0 0 460 220" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="tortE" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a05a38"/><stop offset=".4" stop-color="#5c2f1e"/>
+              <stop offset=".68" stop-color="#c98a4b"/><stop offset="1" stop-color="#6e3a24"/>
+            </linearGradient>
+            <radialGradient id="lensE" cx=".35" cy=".3" r="1">
+              <stop offset="0" stop-color="#e3c98b" stop-opacity=".55"/><stop offset="1" stop-color="#3d2f1a" stop-opacity=".25"/>
+            </radialGradient>
+          </defs>
+          <circle cx="140" cy="112" r="76" stroke="url(#tortE)" stroke-width="17"/>
+          <circle cx="140" cy="112" r="67" fill="url(#lensE)"/>
+          <circle cx="322" cy="112" r="76" stroke="url(#tortE)" stroke-width="17"/>
+          <circle cx="322" cy="112" r="67" fill="url(#lensE)"/>
+          <path d="M206 95 Q231 74 256 95" stroke="url(#tortE)" stroke-width="15" stroke-linecap="round"/>
+          <path d="M67 99 L8 82" stroke="#5c2f1e" stroke-width="13" stroke-linecap="round"/>
+          <path d="M395 99 L454 82" stroke="#5c2f1e" stroke-width="13" stroke-linecap="round"/>
+          <line x1="104" y1="74" x2="152" y2="152" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+          <line x1="288" y1="70" x2="324" y2="140" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="live-badge"><span class="dot"></span> Agendamento 24h pelo site</div>
+      <div class="rev-float">
+        <div class="st">★★★★★</div>
+        <p>“Uma das melhores experiências na renovação dos óculos. Certamente os melhores da região.”</p>
+        <div class="who">Everton S. · Google · Serra Negra</div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <div class="shead left">
+        <span class="eb">A experiência NK</span>
+        <h2>Não vendemos óculos. Entregamos visão + identidade.</h2>
+      </div>
+      <div class="exp-feats">
+        <div class="exp-f"><span class="ic">👁</span><div><b>Exame de vista no local — NK OptoClinic</b><p>Agende pelo site em 30 segundos e atualize seu grau com a equipe da loja, na sua unidade.</p></div></div>
+        <div class="exp-f"><span class="ic">✦</span><div><b>Escolha consultiva no showroom</b><p>A gente analisa seu rosto, estilo e rotina pra indicar as armações que têm mesmo a sua cara.</p></div></div>
+        <div class="exp-f"><span class="ic">⚖</span><div><b>Ajuste de armação no ato</b><p>Nariz, hastes, caimento — o óculos só sai da loja depois de ajustado ao seu rosto.</p></div></div>
+        <div class="exp-f"><span class="ic">💬</span><div><b>Atendimento que responde</b><p>Pedidos, dúvidas e agendamentos pelo WhatsApp — com confirmação direto no seu chat.</p></div></div>
+      </div>
+      <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-dark" href="#exame">Agendar avaliação</a>
+        <a class="btn btn-oline-d" href="#colecao">Ver coleções</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LENTES ================= -->
+<section class="lentes">
+  <div class="dots"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="shead left on-dark">
+        <span class="eb">Pra cada jeito de ver</span>
+        <h2>A lente certa muda o seu dia inteiro</h2>
+        <p>Converse com a gente sobre a sua rotina: a gente indica a lente ideal pro seu grau, seu trabalho e seu estilo de vida.</p>
+      </div>
+      <div class="lente-grid">
+        <div class="lente-card"><b>Lentes de contato</b><p>Mensais e diárias — conforto do começo ao fim do dia.</p></div>
+        <div class="lente-card"><b>Anti-reflexo</b><p>Menos reflexo na tela e no farol, mais nitidez.</p></div>
+        <div class="lente-card"><b>Fotossensíveis</b><p>Clareza dentro de casa, proteção solar na rua.</p></div>
+        <div class="lente-card"><b>Multifocais</b><p>Perto e longe no mesmo par — sem trocar de óculos.</p></div>
+      </div>
+    </div>
+    <div class="lentes-vis rv">
+      <div class="main">
+        <svg viewBox="0 0 300 170" fill="none" aria-hidden="true" style="width:70%">
+          <defs><radialGradient id="iris" cx=".5" cy=".45" r=".65">
+            <stop offset="0" stop-color="#e3c98b"/><stop offset=".55" stop-color="#8a5a28"/><stop offset="1" stop-color="#2c1a10"/>
+          </radialGradient></defs>
+          <circle cx="150" cy="85" r="52" stroke="#e3c98b" stroke-width="2.5" opacity=".9"/>
+          <circle cx="150" cy="85" r="40" fill="url(#iris)"/>
+          <circle cx="150" cy="85" r="16" fill="#0c0906"/>
+          <circle cx="163" cy="72" r="6" fill="#fff" opacity=".85"/>
+          <circle cx="150" cy="85" r="60" stroke="#e3c98b" stroke-width="1" opacity=".35"/>
+          <circle cx="150" cy="85" r="70" stroke="#e3c98b" stroke-width="1" opacity=".18"/>
+        </svg>
+      </div>
+      <div class="sub">
+        <div class="goldcard"><p class="t">◆ Consultoria de lentes</p><p>Não sabe qual lente pedir? A gente te ajuda a escolher — sem enrolação.</p></div>
+        <div class="side">
+          <svg viewBox="0 0 220 130" fill="none" aria-hidden="true" style="width:78%">
+            <ellipse cx="110" cy="65" rx="62" ry="34" stroke="#e3c98b" stroke-width="2" opacity=".8"/>
+            <ellipse cx="110" cy="65" rx="40" ry="20" stroke="#e3c98b" stroke-width="1.5" opacity=".5"/>
+            <path d="M48 65 Q110 20 172 65 Q110 110 48 65 Z" stroke="#c6a664" stroke-width="1" opacity=".35"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AGENDAMENTO ================= -->
+<section class="bloco" id="exame">
+  <div class="wrap book-grid">
+    <div class="book-left rv">
+      <div class="shead left">
+        <span class="eb">Agende em 30 segundos</span>
+        <h2>Seu exame de vista está a um clique</h2>
+        <p>Escolha a unidade, o dia e o horário. A confirmação chega no seu WhatsApp.</p>
+      </div>
+      <ul>
+        <li>Sem fila, sem espera — horário só seu</li>
+        <li>Traga sua receita antiga ou faça o exame conosco</li>
+        <li>Quatro unidades: Amparo, Serra Negra, Socorro e Sto. Antônio de Posse</li>
+      </ul>
+      <div class="phone-card">
+        <span class="ic">✆</span>
+        <div><p class="l">Prefere WhatsApp direto?</p><p class="n">(11) 95240-6269</p></div>
+      </div>
     </div>
 
     <div class="book rv" id="book">
@@ -389,31 +637,31 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
       <div class="bstep">
         <label><i>1.</i> UNIDADE</label>
         <div class="opt-grid" data-g="unidade">
-          <button class="opt" data-v="Amparo">Amparo</button>
-          <button class="opt" data-v="Serra Negra">Serra Negra</button>
-          <button class="opt" data-v="Socorro">Socorro</button>
-          <button class="opt" data-v="Santo Antônio de Posse">Sto. Antônio de Posse</button>
+          <button class="opt" type="button" data-v="Amparo">Amparo</button>
+          <button class="opt" type="button" data-v="Serra Negra">Serra Negra</button>
+          <button class="opt" type="button" data-v="Socorro">Socorro</button>
+          <button class="opt" type="button" data-v="Santo Antônio de Posse">Sto. Antônio de Posse</button>
         </div>
       </div>
 
       <div class="bstep">
         <label><i>2.</i> SERVIÇO</label>
         <div class="opt-grid" data-g="servico">
-          <button class="opt" data-v="Exame de vista">Exame de vista</button>
-          <button class="opt" data-v="Ajuste de armação">Ajuste de armação</button>
-          <button class="opt" data-v="Lente de contato (adaptação)">Lente de contato</button>
-          <button class="opt" data-v="Outro assunto">Outro assunto</button>
+          <button class="opt" type="button" data-v="Exame de vista">Exame de vista</button>
+          <button class="opt" type="button" data-v="Ajuste de armação">Ajuste de armação</button>
+          <button class="opt" type="button" data-v="Lente de contato (adaptação)">Lente de contato</button>
+          <button class="opt" type="button" data-v="Outro assunto">Outro assunto</button>
         </div>
       </div>
 
       <div class="bstep">
         <label><i>3.</i> DIA</label>
-        <div class="dias" data-g="dia" id="dias"><!-- via JS --></div>
+        <div class="dias" data-g="dia" id="dias"></div>
       </div>
 
       <div class="bstep">
         <label><i>4.</i> HORÁRIO</label>
-        <div class="horas" data-g="hora" id="horas"><!-- via JS --></div>
+        <div class="horas" data-g="hora" id="horas"></div>
       </div>
 
       <div class="bstep">
@@ -423,79 +671,114 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
 
       <div class="resumo" id="resumo">Seu agendamento aparece aqui 👓</div>
       <a class="btn btn-wa" id="confbtn" disabled>Confirmar pelo WhatsApp</a>
-      <p class="aviso">Você recebe a confirmação no WhatsApp. Se for fora do horário da loja, a gente responde assim que abrir.</p>
+      <p class="aviso">Você recebe a confirmação no WhatsApp. Se for fora do horário da loja, respondemos assim que abrir.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= DEPOIMENTOS ================= -->
-<section class="bloco" id="depoimentos">
+<section class="bloco rev-band" id="depoimentos">
   <div class="wrap">
-    <div class="head-sec rv">
-      <div class="kick">03 · QUEM JÁ ENXERGOU ALÉM</div>
-      <h2 class="h2">Nota máxima em <em>Amparo</em></h2>
-      <p class="sub">Avaliações reais de clientes no Google.</p>
-      <div class="rate-cards">
-        <div class="rate"><div class="num">5,0</div><div class="estrelas">★★★★★</div><div class="lbl">Amparo · 6 avaliações</div></div>
-        <div class="rate"><div class="num">4,7</div><div class="estrelas">★★★★★</div><div class="lbl">Serra Negra · 12 avaliações</div></div>
-      </div>
+    <div class="shead rv">
+      <span class="eb">5,0 no Google · Amparo · 4,7 em Serra Negra</span>
+      <h2>Quem enxerga além, recomenda</h2>
+      <p>Avaliações reais de clientes no Google.</p>
     </div>
     <div class="rev-grid">
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Melhor experiência… pessoas gentis, ótimo ambiente, o melhor atendimento da região. Melhores preços e qualidade em óculos e lentes de contato.</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Melhor experiência… pessoas gentis, ótimo ambiente, o melhor atendimento da região. Melhores preços e qualidade em óculos e lentes de contato.</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">DR</div><div><b>Drieli R.</b><span>Amparo · Google</span></div></div></div>
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Atendimento excelente! Amei meus óculos, entregues no prazo combinado. Sucesso total!</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Atendimento excelente! Amei meus óculos, entregues no prazo combinado. Sucesso total!</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">BZ</div><div><b>Bárbara Z.</b><span>Amparo · Google</span></div></div></div>
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Armações de óculos de qualidade e um ótimo atendimento!</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Armações de óculos de qualidade e um ótimo atendimento!</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">TL</div><div><b>Tardelli L.</b><span>Amparo · Google</span></div></div></div>
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Uma das melhores experiências na renovação dos óculos. Profissionais altamente qualificados e muito atenciosos — os melhores de Serra Negra e região.</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Uma das melhores experiências na renovação dos óculos. Profissionais altamente qualificados e muito atenciosos — os melhores de Serra Negra e região.</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">ES</div><div><b>Everton S.</b><span>Serra Negra · Google</span></div></div></div>
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Fiz meu exame de vista e meus óculos aqui. Superatenciosos, chegaram antes do prazo e preço acessível. Recomendo!</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Fiz meu exame de vista e meus óculos aqui. Superatenciosos, chegaram antes do prazo e preço acessível. Recomendo!</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">LA</div><div><b>Leonardo A.</b><span>Serra Negra · Google</span></div></div></div>
-      <div class="rev rv"><span class="aspas">”</span><div class="estrelas">★★★★★</div>
-        <p>Super recomendo. Atendimento excelente do Sr. Nathan — você vê o mundo com clareza depois. ❤️</p>
+      <div class="rev rv"><div class="q">“</div>
+        <blockquote>Super recomendo. Atendimento excelente — você vê o mundo com clareza depois. ❤️</blockquote>
+        <div class="st">★★★★★</div>
         <div class="quem"><div class="av">DC</div><div><b>Daniel C.</b><span>Serra Negra · Google</span></div></div></div>
     </div>
   </div>
 </section>
 
 <!-- ================= UNIDADES ================= -->
-<section class="bloco alt" id="unidades">
+<section class="bloco" id="unidades">
   <div class="wrap">
-    <div class="head-sec rv">
-      <div class="kick">04 · ONDE ESTAMOS</div>
-      <h2 class="h2">Quatro unidades, <em>um mesmo cuidado</em></h2>
+    <div class="shead rv">
+      <span class="eb">Onde nos encontrar</span>
+      <h2>Quatro endereços, um mesmo cuidado</h2>
     </div>
     <div class="uni-grid">
-      <div class="uni rv"><div class="cidade">Amparo</div><span class="tag-unit">SHOWROOM</span>
-        <p>Av. Dr. Carlos Burgos, 1645 — Lj 7<br>Centro · CEP 13905-160</p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Amparo" target="_blank" rel="noopener">Ver no mapa →</a></div>
-      <div class="uni rv"><div class="cidade">Serra Negra</div><span class="tag-unit">MATRIZ</span>
-        <p>R. Cel. Pedro Penteado, 627 — Lj 10<br>Centro · CEP 13930-000</p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Serra+Negra" target="_blank" rel="noopener">Ver no mapa →</a></div>
-      <div class="uni rv"><div class="cidade">Socorro</div><span class="tag-unit">SHOWROOM</span>
-        <p>R. Dr. Campos Salles, 58<br>Centro · CEP 13960-000</p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Socorro" target="_blank" rel="noopener">Ver no mapa →</a></div>
-      <div class="uni rv"><div class="cidade">Sto. Antônio de Posse</div><span class="tag-unit">SHOWROOM</span>
-        <p>R. Amaro Ortiz de Campos, 13<br>Vila Esperança · CEP 13831-022</p>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Santo+Antonio+de+Posse" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      <article class="uni rv">
+        <div class="cap"><span class="tagp">Showroom</span><span class="city">Amparo</span></div>
+        <div class="bd"><p>Av. Dr. Carlos Burgos, 1645 — Lj 7<br>Centro · CEP 13905-160</p>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Amparo" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      </article>
+      <article class="uni rv">
+        <div class="cap"><span class="tagp">Matriz</span><span class="city">Serra Negra</span></div>
+        <div class="bd"><p>R. Cel. Pedro Penteado, 627 — Lj 10<br>Centro · CEP 13930-000</p>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Serra+Negra" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      </article>
+      <article class="uni rv">
+        <div class="cap"><span class="tagp">Showroom</span><span class="city">Socorro</span></div>
+        <div class="bd"><p>R. Dr. Campos Salles, 58<br>Centro · CEP 13960-000</p>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Socorro" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      </article>
+      <article class="uni rv">
+        <div class="cap"><span class="tagp">Showroom</span><span class="city">Sto. Antônio de Posse</span></div>
+        <div class="bd"><p>R. Amaro Ortiz de Campos, 13<br>Vila Esperança · CEP 13831-022</p>
+          <a class="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=NK+Showroom+Santo+Antonio+de+Posse" target="_blank" rel="noopener">Ver no mapa →</a></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA FINAL ================= -->
-<section class="cta-final">
-  <div class="wrap rv">
-    <h2 class="h2">Pronto pra enxergar <em>além?</em></h2>
-    <p>Um exame, um ajuste ou o par de óculos que faltava na sua coleção —
-      tudo começa com um “oi” no WhatsApp.</p>
-    <div class="ctas">
-      <a class="btn btn-espresso" href="#exame">Agendar exame de vista</a>
-      <a class="btn btn-line" href="https://wa.me/5511952406269?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NK%20Showroom%20%F0%9F%91%93" target="_blank" rel="noopener">Falar com a loja</a>
+<!-- ================= FAQ + CLUB ================= -->
+<section class="bloco" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eb">Dúvidas frequentes</span>
+      <h2>Tudo o que você precisa saber</h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Como agendo meu exame de vista?<span class="pm">+</span></summary>
+        <div class="a">Aqui mesmo no site: escolha a unidade, o serviço, o dia e o horário, coloque seu nome e confirme —
+          a conversa abre no WhatsApp com tudo preenchido, e a loja confirma sua vaga por lá.</div></details>
+      <details><summary>Quanto custa o exame?<span class="pm">+</span></summary>
+        <div class="a">Os valores são confirmados no WhatsApp antes de fechar o agendamento — sem surpresa.
+          Chama a gente que a gente te passa tudo certinho.</div></details>
+      <details><summary>Preciso levar minha receita antiga?<span class="pm">+</span></summary>
+        <div class="a">Ajuda, mas não é obrigatório: você pode fazer o exame de vista na própria unidade,
+          no NK OptoClinic, no horário que agendar.</div></details>
+      <details><summary>Vocês entregam os óculos?<span class="pm">+</span></summary>
+        <div class="a">Você pode retirar na sua unidade — com o ajuste incluído — ou combinar a entrega na região
+          pelo WhatsApp.</div></details>
+      <details><summary>Em quais cidades vocês estão?<span class="pm">+</span></summary>
+        <div class="a">Quatro unidades: Amparo, Serra Negra (matriz), Socorro e Santo Antônio de Posse —
+          todas na região do Circuito das Águas, em São Paulo.</div></details>
+    </div>
+
+    <div class="club rv">
+      <div>
+        <p class="t">✦ Pronto pra escolher enxergar além?</p>
+        <h3>Um exame, um ajuste ou o par que faltava — começa com um <em>“oi”</em>.</h3>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#exame">Agendar exame de vista</a>
+        <a class="btn btn-oline" href="https://wa.me/5511952406269?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20NK%20Showroom%20%F0%9F%91%93" target="_blank" rel="noopener">Falar com a loja</a>
+      </div>
     </div>
   </div>
 </section>
@@ -507,22 +790,23 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
     <div class="ft">
       <div>
         <a class="logo" href="#inicio" aria-label="NK Showroom">
-          <div class="mono-mark"><span>NK</span></div>
+          <div class="mk"><span>NK</span></div>
           <div class="wm"><b>NK Showroom</b><span>ÓTICA · OPTOCLINIC</span></div>
         </a>
         <div class="slogan">“Escolha enxergar além.”</div>
       </div>
       <div>
-        <h4>NAVEGAR</h4>
+        <h4>Navegar</h4>
         <ul>
-          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#colecao">Coleções</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#exame">Agendar exame</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#unidades">Unidades</a></li>
         </ul>
       </div>
       <div>
-        <h4>CONTATO</h4>
+        <h4>Contato</h4>
         <ul>
           <li><a href="https://wa.me/5511952406269" target="_blank" rel="noopener">WhatsApp (11) 95240-6269</a></li>
           <li><a href="https://www.instagram.com/nkotica.co/" target="_blank" rel="noopener">Instagram @nkotica.co</a></li>
@@ -546,73 +830,57 @@ footer{background:var(--paper2);border-top:1px solid var(--line2);padding:52px 0
 "use strict";
 var WA = "5511952406269";
 
-/* ---------- COLEÇÃO: produtos ---------- */
+/* ---------- SVG dos óculos ---------- */
 function oculosSvg(tipo, c1, c2){
-  var defs = '<defs><linearGradient id="g'+tipo+'" x1="0" y1="0" x2="1" y2="1">'+
-    '<stop offset="0" stop-color="'+c1+'"/><stop offset=".65" stop-color="'+c2+'"/><stop offset="1" stop-color="'+c1+'"/></linearGradient>'+
-    '<linearGradient id="l'+tipo+'" x1="0" y1="0" x2="1" y2="1">'+
-    '<stop offset="0" stop-color="#ffffff" stop-opacity=".5"/><stop offset="1" stop-color="#e7dcc9" stop-opacity=".22"/></linearGradient></defs>';
+  var defs = '<defs><linearGradient id="g'+tipo+Math.random().toString(36).slice(2,6)+'" x1="0" y1="0" x2="1" y2="1">'+
+    '<stop offset="0" stop-color="'+c1+'"/><stop offset=".65" stop-color="'+c2+'"/><stop offset="1" stop-color="'+c1+'"/></linearGradient></defs>';
+  var id = defs.match(/id="([^"]+)"/)[1];
   var S = 'viewBox="0 0 240 110" fill="none"';
   if(tipo==="round") return '<svg '+S+'>'+defs+
-    '<circle cx="72" cy="58" r="36" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<circle cx="72" cy="58" r="31" fill="url(#l'+tipo+')"/>'+
-    '<circle cx="168" cy="58" r="36" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<circle cx="168" cy="58" r="31" fill="url(#l'+tipo+')"/>'+
+    '<circle cx="72" cy="58" r="36" stroke="url(#'+id+')" stroke-width="9"/><circle cx="72" cy="58" r="31" fill="#fff" fill-opacity=".12"/>'+
+    '<circle cx="168" cy="58" r="36" stroke="url(#'+id+')" stroke-width="9"/><circle cx="168" cy="58" r="31" fill="#fff" fill-opacity=".12"/>'+
     '<path d="M104 50 Q120 40 136 50" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/>'+
-    '<path d="M38 50 L8 42" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/>'+
-    '<path d="M202 50 L232 42" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
+    '<path d="M38 50 L8 42" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/><path d="M202 50 L232 42" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
   if(tipo==="square") return '<svg '+S+'>'+defs+
-    '<rect x="28" y="30" width="76" height="56" rx="14" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<rect x="40" y="40" width="52" height="36" rx="9" fill="url(#l'+tipo+')"/>'+
-    '<rect x="136" y="30" width="76" height="56" rx="14" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<rect x="148" y="40" width="52" height="36" rx="9" fill="url(#l'+tipo+')"/>'+
+    '<rect x="28" y="30" width="76" height="56" rx="14" stroke="url(#'+id+')" stroke-width="9"/>'+
+    '<rect x="136" y="30" width="76" height="56" rx="14" stroke="url(#'+id+')" stroke-width="9"/>'+
     '<path d="M104 48 Q120 42 136 48" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/>'+
-    '<path d="M28 44 L4 40" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/>'+
-    '<path d="M212 44 L236 40" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
+    '<path d="M28 44 L4 40" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/><path d="M212 44 L236 40" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
   if(tipo==="cateye") return '<svg '+S+'>'+defs+
-    '<path d="M30 62 Q28 34 62 30 Q88 28 100 50 L100 62 Q96 88 64 88 Q34 86 30 62 Z" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<path d="M140 62 Q138 34 172 30 Q198 28 210 50 L210 62 Q206 88 174 88 Q144 86 140 62 Z" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
+    '<path d="M30 62 Q28 34 62 30 Q88 28 100 50 L100 62 Q96 88 64 88 Q34 86 30 62 Z" stroke="url(#'+id+')" stroke-width="9"/>'+
+    '<path d="M140 62 Q138 34 172 30 Q198 28 210 50 L210 62 Q206 88 174 88 Q144 86 140 62 Z" stroke="url(#'+id+')" stroke-width="9"/>'+
     '<path d="M100 52 Q120 40 140 52" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/>'+
-    '<path d="M32 34 L6 22" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/>'+
-    '<path d="M208 34 L234 22" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
+    '<path d="M32 34 L6 22" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/><path d="M208 34 L234 22" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
   if(tipo==="aviator") return '<svg '+S+'>'+defs+
-    '<path d="M34 36 L100 36 Q104 66 88 82 Q64 94 46 76 Q32 56 34 36 Z" stroke="url(#g'+tipo+')" stroke-width="8"/>'+
-    '<path d="M140 36 L206 36 Q210 66 194 82 Q170 94 152 76 Q138 56 140 36 Z" stroke="url(#g'+tipo+')" stroke-width="8"/>'+
+    '<path d="M34 36 L100 36 Q104 66 88 82 Q64 94 46 76 Q32 56 34 36 Z" stroke="url(#'+id+')" stroke-width="8"/>'+
+    '<path d="M140 36 L206 36 Q210 66 194 82 Q170 94 152 76 Q138 56 140 36 Z" stroke="url(#'+id+')" stroke-width="8"/>'+
     '<path d="M34 30 Q120 18 206 30" stroke="'+c2+'" stroke-width="6" stroke-linecap="round"/>'+
     '<path d="M100 40 Q120 34 140 40" stroke="'+c2+'" stroke-width="6" stroke-linecap="round"/>'+
-    '<path d="M36 36 L6 30" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/>'+
-    '<path d="M204 36 L234 30" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
+    '<path d="M36 36 L6 30" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/><path d="M204 36 L234 30" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
   if(tipo==="wire") return '<svg '+S+'>'+defs+
-    '<circle cx="72" cy="58" r="38" stroke="url(#g'+tipo+')" stroke-width="4"/>'+
-    '<circle cx="72" cy="58" r="33" fill="url(#l'+tipo+')" stroke="url(#g'+tipo+')" stroke-width="1.5"/>'+
-    '<circle cx="168" cy="58" r="38" stroke="url(#g'+tipo+')" stroke-width="4"/>'+
-    '<circle cx="168" cy="58" r="33" fill="url(#l'+tipo+')" stroke="url(#g'+tipo+')" stroke-width="1.5"/>'+
+    '<circle cx="72" cy="58" r="38" stroke="url(#'+id+')" stroke-width="4"/><circle cx="72" cy="58" r="33" fill="#fff" fill-opacity=".1" stroke="url(#'+id+')" stroke-width="1.5"/>'+
+    '<circle cx="168" cy="58" r="38" stroke="url(#'+id+')" stroke-width="4"/><circle cx="168" cy="58" r="33" fill="#fff" fill-opacity=".1" stroke="url(#'+id+')" stroke-width="1.5"/>'+
     '<path d="M106 50 Q120 40 134 50" stroke="'+c1+'" stroke-width="4" stroke-linecap="round"/>'+
-    '<path d="M34 48 L6 40" stroke="'+c1+'" stroke-width="3.5" stroke-linecap="round"/>'+
-    '<path d="M206 48 L234 40" stroke="'+c1+'" stroke-width="3.5" stroke-linecap="round"/></svg>';
+    '<path d="M34 48 L6 40" stroke="'+c1+'" stroke-width="3.5" stroke-linecap="round"/><path d="M206 48 L234 40" stroke="'+c1+'" stroke-width="3.5" stroke-linecap="round"/></svg>';
   if(tipo==="kid") return '<svg '+S+'>'+defs+
-    '<circle cx="72" cy="58" r="33" stroke="url(#g'+tipo+')" stroke-width="10"/>'+
-    '<circle cx="72" cy="58" r="27" fill="url(#l'+tipo+')"/>'+
-    '<circle cx="168" cy="58" r="33" stroke="url(#g'+tipo+')" stroke-width="10"/>'+
-    '<circle cx="168" cy="58" r="27" fill="url(#l'+tipo+')"/>'+
+    '<circle cx="72" cy="58" r="33" stroke="url(#'+id+')" stroke-width="10"/><circle cx="72" cy="58" r="27" fill="#fff" fill-opacity=".12"/>'+
+    '<circle cx="168" cy="58" r="33" stroke="url(#'+id+')" stroke-width="10"/><circle cx="168" cy="58" r="27" fill="#fff" fill-opacity=".12"/>'+
     '<path d="M103 50 Q120 42 137 50" stroke="'+c2+'" stroke-width="9" stroke-linecap="round"/>'+
-    '<path d="M41 46 Q20 38 8 46" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/>'+
-    '<path d="M199 46 Q220 38 232 46" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/></svg>';
+    '<path d="M41 46 Q20 38 8 46" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/><path d="M199 46 Q220 38 232 46" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/></svg>';
   if(tipo==="box") return '<svg '+S+'>'+defs+
-    '<rect x="30" y="26" width="180" height="62" rx="12" stroke="url(#g'+tipo+')" stroke-width="8"/>'+
+    '<rect x="30" y="26" width="180" height="62" rx="12" stroke="url(#'+id+')" stroke-width="8"/>'+
     '<rect x="30" y="26" width="180" height="20" rx="10" fill="'+c2+'" opacity=".85"/>'+
     '<ellipse cx="120" cy="76" rx="26" ry="10" stroke="'+c1+'" stroke-width="4"/>'+
-    '<ellipse cx="120" cy="72" rx="16" ry="6" stroke="'+c1+'" stroke-width="3" opacity=".6"/>'+
-    '<path d="M64 46 L74 46 M86 46 L96 46 M108 46 L118 46 M130 46 L140 46 M152 46 L162 46 M174 46 L184 46" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".5"/></svg>';
+    '<ellipse cx="120" cy="72" rx="16" ry="6" stroke="'+c1+'" stroke-width="3" opacity=".6"/></svg>';
   if(tipo==="sport") return '<svg '+S+'>'+defs+
-    '<path d="M28 44 Q30 84 72 86 Q102 86 106 54 L106 40 L28 40 Z" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
-    '<path d="M134 44 Q136 84 178 86 Q208 86 212 54 L212 40 L134 40 Z" stroke="url(#g'+tipo+')" stroke-width="9"/>'+
+    '<path d="M28 44 Q30 84 72 86 Q102 86 106 54 L106 40 L28 40 Z" stroke="url(#'+id+')" stroke-width="9"/>'+
+    '<path d="M134 44 Q136 84 178 86 Q208 86 212 54 L212 40 L134 40 Z" stroke="url(#'+id+')" stroke-width="9"/>'+
     '<path d="M106 44 Q120 36 134 44" stroke="'+c2+'" stroke-width="8" stroke-linecap="round"/>'+
-    '<path d="M28 44 L2 38" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/>'+
-    '<path d="M212 44 L238 38" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
+    '<path d="M28 44 L2 38" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/><path d="M212 44 L238 38" stroke="'+c2+'" stroke-width="7" stroke-linecap="round"/></svg>';
   return "";
 }
 
+/* ---------- CATÁLOGO ---------- */
 var PRODUTOS = [
   {cat:"grau", nome:"Armação Tartaruga Redonda", desc:"Acetato tartaruga · aro redondo", tipo:"round", c1:"#8a4a2e", c2:"#5c2f1e"},
   {cat:"grau", nome:"Fio Dourado Minimal", desc:"Metal dourado · ultra leve", tipo:"wire", c1:"#c9a35c", c2:"#a07a36"},
@@ -625,18 +893,54 @@ var PRODUTOS = [
   {cat:"lentes", nome:"Lente de Contato Mensal", desc:"Visão nítida o mês todo", tipo:"box", c1:"#8a4a2e", c2:"#5c2f1e"},
   {cat:"infantil", nome:"Kids Flex Color", desc:"Hastes flexíveis · à prova de queda", tipo:"kid", c1:"#d98a4e", c2:"#a05a2e"}
 ];
+var CAT_LABEL = {grau:"ÓCULOS DE GRAU", sol:"ÓCULOS DE SOL", lentes:"LENTES DE CONTATO", infantil:"INFANTIL"};
 
+/* hero card → whatsapp */
+(function(){
+  var p = PRODUTOS[0];
+  var msg = "Olá! Vi no site da NK Showroom o modelo *"+p.nome+"* e quero saber valores e disponibilidade 🤓";
+  document.getElementById("heroGo").href = "https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+})();
+
+/* categorias */
+var CATS = [
+  {cat:"grau", nome:"Óculos de Grau", desc:"Armações leves e com personalidade, do clássico ao fashion.", tipo:"round", c1:"#8a4a2e", c2:"#5c2f1e"},
+  {cat:"sol", nome:"Óculos de Sol", desc:"Proteção total com estilo — vintage, aviador ou esportivo.", tipo:"aviator", c1:"#c98a4b", c2:"#8a5a28"},
+  {cat:"lentes", nome:"Lentes de Contato", desc:"Liberdade total de movimento, com o conforto do dia todo.", tipo:"box", c1:"#a05a38", c2:"#6e3a24"},
+  {cat:"infantil", nome:"Infantil", desc:"Resistentes, flexíveis e divertidas — feitas pra aguentar a infância.", tipo:"kid", c1:"#d98a4e", c2:"#a05a2e"}
+];
+var catGrid = document.getElementById("catGrid");
+CATS.forEach(function(c){
+  var n = PRODUTOS.filter(function(p){return p.cat===c.cat;}).length;
+  var a = document.createElement("a");
+  a.className = "cat-card rv";
+  a.href = "#colecao";
+  a.setAttribute("data-ir-cat", c.cat);
+  a.innerHTML = '<div class="art">'+oculosSvg(c.tipo, c.c1, c.c2)+'</div><div class="ov"></div>'+
+    '<div class="bd"><p class="ct">'+n+' modelo'+(n>1?"s":"")+'</p><h3>'+c.nome+'</h3><p>'+c.desc+'</p>'+
+    '<span class="ds">Descobrir <span class="ci">→</span></span></div>';
+  catGrid.appendChild(a);
+});
+/* clique na categoria aplica o filtro */
+catGrid.addEventListener("click", function(e){
+  var card = e.target.closest("[data-ir-cat]");
+  if(!card) return;
+  var f = card.getAttribute("data-ir-cat");
+  var btn = document.querySelector('.fbtn[data-f="'+f+'"]');
+  if(btn) btn.click();
+});
+
+/* produtos */
 var grelha = document.getElementById("grelha");
-PRODUTOS.forEach(function(p, i){
+PRODUTOS.forEach(function(p){
   var card = document.createElement("div");
   card.className = "pcard rv";
   card.setAttribute("data-cat", p.cat);
-  var msg = "Olá! Vi no site da NK Showroom o modelo *" + p.nome + "* e quero saber valores e disponibilidade 🤓";
+  var msg = "Olá! Vi no site da NK Showroom o modelo *"+p.nome+"* e quero saber valores e disponibilidade 🤓";
   card.innerHTML =
-    '<div class="fig">' + oculosSvg(p.tipo, p.c1, p.c2) + '</div>' +
-    '<div class="bd"><div class="cat">' + ({grau:"ÓCULOS DE GRAU",sol:"ÓCULOS DE SOL",lentes:"LENTES DE CONTATO",infantil:"INFANTIL"}[p.cat]) + '</div>' +
-    '<h3>' + p.nome + '</h3><p class="desc">' + p.desc + '</p>' +
-    '<a class="pedir" target="_blank" rel="noopener" href="https://wa.me/' + WA + '?text=' + encodeURIComponent(msg) + '">Quero este →</a></div>';
+    '<div class="fig">'+oculosSvg(p.tipo, p.c1, p.c2)+'</div>'+
+    '<div class="bd"><p class="cat">'+CAT_LABEL[p.cat]+'</p><h3>'+p.nome+'</h3><p class="desc">'+p.desc+'</p>'+
+    '<a class="pedir" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent(msg)+'">Quero este →</a></div>';
   grelha.appendChild(card);
 });
 
@@ -648,14 +952,13 @@ fbtns.forEach(function(b){
     b.classList.add("on");
     var f = b.getAttribute("data-f");
     document.querySelectorAll(".pcard").forEach(function(c){
-      var show = (f === "todos" || c.getAttribute("data-cat") === f);
-      c.classList.toggle("escondido", !show);
+      c.classList.toggle("escondido", !(f==="todos" || c.getAttribute("data-cat")===f));
     });
   });
 });
 
 /* ---------- AGENDAMENTO ---------- */
-var estado = {unidade:"", servico:"", dia:"", diaISO:"", hora:"", nome:""};
+var estado = {unidade:"", servico:"", dia:"", hora:"", nome:""};
 var fmtDia = new Intl.DateTimeFormat("pt-BR", {weekday:"short"});
 var fmtNum = new Intl.DateTimeFormat("pt-BR", {day:"numeric", month:"short"});
 var diasBox = document.getElementById("dias");
@@ -663,12 +966,9 @@ var hoje = new Date();
 for(var d=1; d<=14; d++){
   var dt = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate()+d);
   var b = document.createElement("button");
-  b.className = "dia";
-  b.type = "button";
-  b.setAttribute("data-iso", dt.toISOString().slice(0,10));
-  var sem = fmtDia.format(dt).replace(".","");
-  b.innerHTML = '<span class="dw">'+sem+'</span><span class="dn">'+dt.getDate()+'</span>';
+  b.className = "dia"; b.type = "button";
   b.setAttribute("data-fmt", fmtNum.format(dt));
+  b.innerHTML = '<span class="dw">'+fmtDia.format(dt).replace(".","")+'</span><span class="dn">'+dt.getDate()+'</span>';
   diasBox.appendChild(b);
 }
 var horasBox = document.getElementById("horas");
@@ -678,29 +978,24 @@ var horasBox = document.getElementById("horas");
   b.textContent = h;
   horasBox.appendChild(b);
 });
-
-function selecionaGrupo(container, btn, campo, valor, fmtValor){
-  container.querySelectorAll(".opt,.dia,.hora").forEach(function(x){ x.classList.remove("on"); });
-  btn.classList.add("on");
-  estado[campo] = valor;
-  atualizaResumo();
-}
 document.querySelectorAll("[data-g]").forEach(function(grupo){
   grupo.addEventListener("click", function(e){
     var btn = e.target.closest(".opt,.dia,.hora");
     if(!btn) return;
+    grupo.querySelectorAll(".opt,.dia,.hora").forEach(function(x){ x.classList.remove("on"); });
+    btn.classList.add("on");
     var g = grupo.getAttribute("data-g");
-    if(g === "unidade") selecionaGrupo(grupo, btn, "unidade", btn.getAttribute("data-v"));
-    if(g === "servico") selecionaGrupo(grupo, btn, "servico", btn.getAttribute("data-v"));
-    if(g === "hora") selecionaGrupo(grupo, btn, "hora", btn.getAttribute("data-v"));
-    if(g === "dia") selecionaGrupo(grupo, btn, "dia", btn.getAttribute("data-fmt"));
+    if(g==="unidade") estado.unidade = btn.getAttribute("data-v");
+    if(g==="servico") estado.servico = btn.getAttribute("data-v");
+    if(g==="hora") estado.hora = btn.getAttribute("data-v");
+    if(g==="dia") estado.dia = btn.getAttribute("data-fmt");
+    atualizaResumo();
   });
 });
 document.getElementById("bnome").addEventListener("input", function(){
   estado.nome = this.value.trim();
   atualizaResumo();
 });
-
 var resumo = document.getElementById("resumo");
 var confbtn = document.getElementById("confbtn");
 function atualizaResumo(){
@@ -710,15 +1005,11 @@ function atualizaResumo(){
   if(estado.dia) p.push("dia <b>"+estado.dia+"</b>");
   if(estado.hora) p.push("às <b>"+estado.hora+"</b>");
   if(estado.nome) p.push("para <b>"+escapeHtml(estado.nome)+"</b>");
-  if(p.length){
-    resumo.innerHTML = p.join(" · ");
-  } else {
-    resumo.textContent = "Seu agendamento aparece aqui 👓";
-  }
+  resumo.innerHTML = p.length ? p.join(" · ") : "Seu agendamento aparece aqui 👓";
   var pronto = estado.unidade && estado.servico && estado.dia && estado.hora && estado.nome;
   if(pronto){
     var msg = "Olá! Quero agendar um *"+estado.servico+"* na unidade de *"+estado.unidade+"*, dia *"+estado.dia+"* às *"+estado.hora+"*. Meu nome é "+estado.nome+". (Agendado pelo site)";
-    confbtn.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg);
+    confbtn.href = "https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
   }
   confbtn.toggleAttribute("disabled", !pronto);
   if(!pronto) confbtn.removeAttribute("href");
@@ -728,7 +1019,7 @@ function escapeHtml(s){ return s.replace(/[&<>"']/g, function(c){ return {"&":"&
 /* ---------- REVEAL ---------- */
 var io = new IntersectionObserver(function(entries){
   entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
-},{threshold:.12});
+},{threshold:.1});
 document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
 
 document.getElementById("ano").textContent = new Date().getFullYear();
