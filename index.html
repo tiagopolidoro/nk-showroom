@@ -17,9 +17,9 @@
   --mono:ui-monospace,'SF Mono','Cascadia Code',Consolas,'Roboto Mono',monospace;
   --wa:#1fa855; --wa2:#178a45;
 }
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
 body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
 img{max-width:100%;display:block}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(198,166,100,.4);
@@ -377,6 +377,8 @@ footer{background:var(--black);color:rgba(255,255,255,.65);padding:56px 0 34px;b
   .hero .stats{gap:26px}
   .club form{flex-direction:column}
 }
+
+section[id]{scroll-margin-top:100px}
 </style>
 </head>
 <body>
